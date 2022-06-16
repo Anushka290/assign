@@ -1,0 +1,29 @@
+.ok{
+    background-color: rgb(127, 172, 255);
+    margin-top: 0;
+}
+#hey{
+    position: absolute;
+    top: 5px;
+    right: 220px;
+    color: black;
+}
+#he{
+    position: absolute;
+    top: 5px;
+    right: 180px;
+    color: black;
+}
+#h{
+    position: absolute;
+    top: 5px;
+    right: 80px;
+    color: black;
+}
+body {
+    overflow: hidden; /* Hide scrollbars */
+    
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+      }

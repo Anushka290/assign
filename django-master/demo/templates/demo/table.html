@@ -1,0 +1,63 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet"  href="{%  static  'css/ta.css'  %}">
+    <title>Document</title>
+    
+</head>
+<body>
+  {% block content%}
+
+
+  {% if user.is_authenticated and user.is_superuser %}
+    <p> <h2>Welcome Admin, {{ user.get_username }}. Thanks for logging in.
+      {% elif user.is_authenticated  %}
+    <p> <h2>Welcome simple-user, {{ user.get_username }}. Thanks for logging in.
+      {% endif %}
+    
+  <a class="ml-2" href="{% url 'userAdmin:logout' %}">Logout</a></h2></p>
+
+
+
+  <div style="background-color: rgb(127, 172, 255);"></div>
+  <div id="mm"><table style="text-align: center" class="gridtable">
+        <tr>
+          <th style="width: 100px">Title</th>
+          <th style="width: 100px">Author</th>
+          <th style="width: 100px">isbn</th>
+  
+          <th style="width: 100px">category</th>
+          {% if user.is_superuser %}
+          
+     
+      
+          <th style="width: 100px">Update</th>
+          <th style="width: 100px">Delete</th>
+
+        </tr>
+        {% endif %}
+      
+        {% for i in k %}
+        <tr>
+          
+          <td>{{i.title}}</td>
+          <td>{{i.author}}</td>
+          <td>{{i.isbn}}</td>
+          <td>{{i.category}}</td>
+         
+          {% if user.is_superuser %}
+          <td><a href="{% url 'demo:updateOrder' i.id %}" style="background-color:rgb(244, 254, 172)">Edit</a></td>
+         
+          <td><a href="{% url 'demo:delete_order' i.id %}" style="background-color:rgb(252, 226, 219)">Delete</a></td>
+        </tr>
+        {% endif %}
+        
+        {% endfor %}
+      </table></div>
+      {% if user.is_superuser %}
+      <h3>  <button><a href="{% url 'demo:create' %}" style="background-color:rgb(200, 178, 41)"> Create new book entry</a> </button> </h3>
+      {% endif %}
+      {% endblock %}
+</body>
+</html>

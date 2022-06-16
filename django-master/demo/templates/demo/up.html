@@ -1,0 +1,24 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{%  static  'css/new.css'  %}">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div style="background-color: rgb(127, 172, 255);"> </div>
+    <div id="mm"><table style="text-align: center",class="gridtable">
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input  type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

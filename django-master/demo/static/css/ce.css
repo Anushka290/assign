@@ -1,0 +1,16 @@
+body{
+    overflow: hidden; 
+    
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+}
+#edit
+{
+    margin-top: 70px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgb(199, 241, 226);
+   
+}

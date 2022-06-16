@@ -1,0 +1,23 @@
+.gridtable th {
+    padding: 8px;
+    border: 1px solid #666666;
+    background-color: #dedede;
+}
+.gridtable td {
+    padding: 8px;
+    border: 1px solid #666666;
+    background-color: #ffffff;
+}
+body{
+    overflow: hidden; 
+    
+    margin: 0; 
+    padding: 0; 
+    box-sizing:border-box;
+}
+.mm
+{
+    margin: 500px;
+    padding: 100px;
+    box-sizing:border-box;
+}
