@@ -1,0 +1,1 @@
+i have design the project django master using mysql as database.I have named the database bookmanagement .Create 1 admin user who can edit delete and create new book but the user who #are not admin user they can oly see the list of books.
